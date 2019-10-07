@@ -1,3 +1,12 @@
+/*
+************************************************************************************************************************************************************
+MainActivity 
+1. Create Intent, String, and TextView objects in the class
+2. Style the ActionBar using a custom layout
+3. Instantiate TextView objects using the id in activity_main.xml
+4. Set onClickListeners to start each new Activity when the TextViews are clicked
+************************************************************************************************************************************************************
+*/
 package com.example.travel;
 
 import android.content.Intent;
@@ -7,10 +16,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-
-
-
 public class MainActivity extends AppCompatActivity {
+    
+    //1. Create Intent, String, and TextView objects in the class
     Intent intent;
     String text;
     TextView textViewViewList, textViewSearchList;
@@ -20,14 +28,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Style the ActionBar using a custom layout
+        //2. Style the ActionBar using a custom layout
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.mainactivity_action_bar);
 
-        //Instantiate Button objects using the id in activity_main.xml
+        //3. Instantiate TextView objects using the id in activity_main.xml
         textViewViewList = findViewById(R.id.viewList);
         textViewSearchList= findViewById(R.id.searchList);
 
+        //4. Set onClickListeners to start each new Activity when the TextViews are clicked
         textViewViewList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        
         textViewSearchList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

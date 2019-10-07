@@ -24,9 +24,7 @@
         <activity
             android:name=".Search_Results"
             android:parentActivityName=".MainActivity">
-        </activity>
-
-        
+        </activity>        
 
     </application>
 
