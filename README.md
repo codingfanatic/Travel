@@ -29,8 +29,13 @@ travel(r, "NY 56432") --> "NY 56432:High Street Pollocksville/786"
 
 travel(r, "NY 5643") --> "NY 5643:/"
 
-# UPDATE LINKS
+# UPDATES
 Switching to OnClickListeners
 >Article: https://www.codingfanatic.com/2019/09/30/switching-to-onclicklisteners-47-100-days-of-code/
 
 >Video: https://www.youtube.com/watch?v=8_yYioNPnxE
+
+Viewing the list of addresses
+>Article: https://www.codingfanatic.com/2019/10/07/travel-app-listview-update-48-100-days-of-code/
+
+>Video: https://www.youtube.com/watch?v=MxQcXAEKgA0
