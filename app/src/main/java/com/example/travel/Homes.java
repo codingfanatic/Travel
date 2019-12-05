@@ -32,7 +32,7 @@ class Homes{
         return streetNumber;
        }
 
-    public String getAll(){
+    public String toString(){
         return this.streetNumber + " " + this.streetName + " " + this.zipcode;
     }
 }

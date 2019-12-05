@@ -27,30 +27,31 @@ public class Search_Results extends AppCompatActivity {
         Homes second = new Homes(Homes.ADDRESS_TWO);
         Homes third = new Homes(Homes.ADDRESS_THREE);
 
-//        InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
-
         editText = findViewById(R.id.input);
-        //editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-        /*
+
+        editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 boolean handled = false;
-                    if (actionId == EditorInfo.IME_ACTION_SEARCH){
-                        sendMessage();
-                        handled = true;
+
+                //Test adding text based on the string in the EditText
+                    if (actionId == EditorInfo.IME_ACTION_DONE){
+                        if(editText.getText().toString().equals("Dave")) {
+                            display_adapter.add("Chappelle");
+                            results_list.setAdapter(display_adapter);
+                        }
                     }
+
                 return handled;
             }
         });
-        */
-
 
         results_list = findViewById(R.id.result_list);
-        original_adapter = new ArrayAdapter<String>(this, R.layout.list_listview);
+        original_adapter = new ArrayAdapter<Homes>(this, R.layout.list_listview);
 
-        original_adapter.add(first.getAll());
-        original_adapter.add(second.getAll());
-        original_adapter.add(third.getAll());
+        original_adapter.add(first);
+        original_adapter.add(second);
+        original_adapter.add(third);
 
         display_adapter = original_adapter;
         results_list.setAdapter(display_adapter);
