@@ -25,14 +25,15 @@ class Homes{
     public String findStreetNumber (String address){
         String streetNumber = "";
         int spaceIndex = 0;
-        
+
         spaceIndex = address.indexOf(" ");
         streetNumber = address.substring(0, spaceIndex);
       
         return streetNumber;
     }
 
-    public String getZipcode(){
+    public String getZipCode(){
+
         return this.zipcode;
     }
 
