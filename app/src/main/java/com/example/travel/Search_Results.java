@@ -29,35 +29,45 @@ public class Search_Results extends AppCompatActivity {
 
         editText = findViewById(R.id.input);
 
+        results_list = findViewById(R.id.result_list);
+        display_adapter = new ArrayAdapter<Homes>(this, R.layout.list_listview);
+        original_adapter = new ArrayAdapter<Homes>(this, R.layout.list_listview);
+
+        //OnEditorActionListener for the keyboard. This logic defines how the list updates
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                String input = editText.getText().toString();
                 boolean handled = false;
 
-                //Test adding text based on the string in the EditText
+                    //If the user presses enter on the keyboard
+                    //Update the display adapter with the proper addresses
                     if (actionId == EditorInfo.IME_ACTION_DONE){
-                        if(editText.getText().toString().equals("Dave")) {
-                            display_adapter.add("Chappelle");
-                            results_list.setAdapter(display_adapter);
+                        display_adapter.clear();
+                        for(int i = 0; i < original_adapter.getCount(); i++){
+                            Object obj = original_adapter.getItem(i);
+                            Homes trueObject = (Homes) obj;
+
+                            if (trueObject.getZipCode()){
+                                display_adapter.add(obj);
+                            }
                         }
+                        results_list.setAdapter(display_adapter);
                     }
 
                 return handled;
             }
         });
 
-        results_list = findViewById(R.id.result_list);
-        original_adapter = new ArrayAdapter<Homes>(this, R.layout.list_listview);
-
-        original_adapter.add(first);
-        original_adapter.add(second);
-        original_adapter.add(third);
-
-        display_adapter = original_adapter;
+        display_adapter.add(first);
+        display_adapter.add(second);
+        display_adapter.add(third);
+        original_adapter = display_adapter;
         results_list.setAdapter(display_adapter);
     }
 
-    protected void update(){
+    protected boolean zipcodeMatches(Homes h, String input){
 
+        return h.getZipcode().equals(input);
     }
 }
