@@ -1,7 +1,7 @@
 /*
 ************************************************************************************************************************************************************
 List Addresses
-1. Add a ListView object to the list_addresses layout 
+1. Add a ListView to the list_addresses layout 
 2. Include an id for the layout
 3. Import Bundle, AppCompatActivity, Menu, ArrayAdapter, ListView
 4. Create a String array containing each of the the addresses
