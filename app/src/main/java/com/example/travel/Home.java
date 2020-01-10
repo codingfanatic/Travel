@@ -1,6 +1,6 @@
 package com.example.travel;
 
-class Homes{
+class Home{
     //Address constants
     protected static String ADDRESS_ONE = "123 Main Street St. Louisville OH 43071";
     protected static String ADDRESS_TWO = "432 Main Long Road St. Louisville OH 43072";
@@ -10,13 +10,13 @@ class Homes{
     private String streetName;
     private String zipcode;
     
-    public Homes(){
+    public Home(){
         streetNumber = "";
         streetName = "";
         zipcode = "";
     }
 
-    public Homes(String address){
+    public Home(String address){
         streetNumber = findStreetNumber(address);
         streetName = address.substring((streetNumber.length() + 1), (address.length() - 9));
         zipcode = address.substring((address.length() - 8), (address.length()));;
@@ -39,5 +39,10 @@ class Homes{
 
     public String toString(){
         return this.streetNumber + " " + this.streetName + " " + this.zipcode;
+    }
+
+    protected boolean hasZipcode(String input){
+
+        return this.getZipCode().equals(input);
     }
 }
