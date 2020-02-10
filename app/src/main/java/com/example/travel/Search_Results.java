@@ -36,26 +36,23 @@ public class Search_Results extends AppCompatActivity {
         original_adapter.add(third);
         no_results_adapter.add("NO RESULTS FOUND");
 
-    //////////////////////Return this to normal after we record the error with arrayoutofbounds
-            /*
             for(int i = 0; i < original_adapter.getCount(); i++){
                 display_adapter.add(original_adapter.getItem(i));
             }
-            */
-        display_adapter = original_adapter;
+
         results_list.setAdapter(display_adapter);
 
         //OnEditorActionListener for the keyboard. This logic defines how the list updates
         editText = findViewById(R.id.input);
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                int adapterSize = original_adapter.getCount();
+                boolean handled = false;
                 String input = editText.getText().toString();
                 String homeString;
-                int adapterSize = original_adapter.getCount();
                 Home dummyHome;
-                //ArrayAdapter noMatches = new ArrayAdapter<String>();
-                boolean handled = false;
 
                 //If the user presses enter on the keyboard, search the list (only sets the No Results adapter for now)
                 //If the editText is empty, display nothing
@@ -96,22 +93,4 @@ public class Search_Results extends AppCompatActivity {
         });
     }
 
-    //for (int i = 0; i < adapterSize ; i++){
-    //display_adapter.add(dummyHome);
-    // s = original_adapter.getItem(0).toString();
-    //dummyHome = new Homes(s);
-                                   /*
-                                    if (dummyHome.getZipCode().equals(input)) {
-                                        display_adapter.add(dummyHome);
-                                    }no_results_adapter
-                                    */
-    //display_adapter.add(dummyHome);
-    //}
-                            /*
-                            if (display_adapter.getCount() == 0){
-                                dummyHome = new Homes("THERE ARE NO MATCHING RESULTS");
-                                display_adapter.add(dummyHome);
-                            }
-
-                             */
 }
