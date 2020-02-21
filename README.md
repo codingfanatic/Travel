@@ -39,3 +39,8 @@ Viewing the list of addresses
 >Article: https://www.codingfanatic.com/2019/10/07/travel-app-listview-update-48-100-days-of-code/
 
 >Video: https://www.youtube.com/watch?v=MxQcXAEKgA0
+
+Version 1.0 Complete
+>Article: https://www.codingfanatic.com/2020/02/21/my-first-app-is-complete-59-of-100-days-of-code/
+
+>Video: https://www.youtube.com/watch?v=2KE4_DITX3c
