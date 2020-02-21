@@ -2,7 +2,7 @@ package com.example.travel;
 
 class test{
     public static void main(String[] args){
-        Homes first = new Homes(Homes.ADDRESS_TWO);
+        Home first = new Home(Home.ADDRESS_TWO);
 
         System.out.println(first);
     }
