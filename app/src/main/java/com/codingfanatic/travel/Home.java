@@ -1,4 +1,4 @@
-package com.example.travel;
+package com.codingfanatic.travel;
 
 class Home{
     //Address constants

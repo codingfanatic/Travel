@@ -1,4 +1,4 @@
-package com.example.travel;
+package com.codingfanatic.travel;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
