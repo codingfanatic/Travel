@@ -1,4 +1,4 @@
-package com.example.travel;
+package com.codingfanatic.travel;
 
 class test{
     public static void main(String[] args){

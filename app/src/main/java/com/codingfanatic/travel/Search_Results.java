@@ -1,4 +1,4 @@
-package com.example.travel;
+package com.codingfanatic.travel;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
