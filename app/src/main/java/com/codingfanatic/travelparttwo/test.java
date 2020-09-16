@@ -1,4 +1,4 @@
-package com.codingfanatic.travel;
+package com.codingfanatic.travelparttwo;
 
 class test{
     public static void main(String[] args){

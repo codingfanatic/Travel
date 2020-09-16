@@ -7,7 +7,7 @@ MainActivity
 4. Set onClickListeners to start each new Activity when the TextViews are clicked
 ************************************************************************************************************************************************************
 */
-package com.codingfanatic.travel;
+package com.codingfanatic.travelparttwo;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -10,7 +10,7 @@ List Addresses
 7. Set the ArrayAdapter for the ListView
 ************************************************************************************************************************************************************
 */
-package com.codingfanatic.travel;
+package com.codingfanatic.travelparttwo;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

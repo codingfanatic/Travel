@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "842678440908",
+    "firebase_url": "https://travelsalesman-248af.firebaseio.com",
+    "project_id": "travelsalesman-248af",
+    "storage_bucket": "travelsalesman-248af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842678440908:android:caa4c4512325f65db10369",
+        "android_client_info": {
+          "package_name": "com.codingfanatic.travelparttwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842678440908-3mk1h9ubprtsu8t206ducrqcia4dq9o1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7Xel_nglXtXzPP0YKZwywhYtR7mXZXl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842678440908-3mk1h9ubprtsu8t206ducrqcia4dq9o1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
