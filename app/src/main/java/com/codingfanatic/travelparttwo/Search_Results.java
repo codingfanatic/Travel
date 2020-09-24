@@ -22,6 +22,9 @@ public class Search_Results extends AppCompatActivity {
         setContentView(R.layout.search);
         getSupportActionBar().setTitle("Search Zipcode");
 
+        /*TODO
+        Add Addresses from Home.class to RealtimeDatabase
+        */
         Home first = new Home(Home.ADDRESS_ONE);
         Home second = new Home(Home.ADDRESS_TWO);
         Home third = new Home(Home.ADDRESS_THREE);
@@ -30,7 +33,12 @@ public class Search_Results extends AppCompatActivity {
         display_adapter = new ArrayAdapter<Home>(this, R.layout.list_listview);
         original_adapter = new ArrayAdapter<Home>(this, R.layout.list_listview);
         no_results_adapter = new ArrayAdapter<String>(this, R.layout.list_listview);
-
+        
+        /*TODO
+        Override the onChildAdded method for the ChildEventListener for the DatabaseReference object
+        Use the String imported from the Realtime Database to instantiate a Home obkect
+        original_adapter.add(whateverThisObjectWillBeCalled)
+        */
         original_adapter.add(first);
         original_adapter.add(second);
         original_adapter.add(third);
